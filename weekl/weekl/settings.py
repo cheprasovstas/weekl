@@ -28,7 +28,7 @@ SECRET_KEY = '#1d$($1#fzm&mpsn_uj1n*(dt042fyi*uc*+isc+krq++%z71@'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost','principi-market.ru','check-in.vps-cheprasov.host4g.ru']
 
 
 # Application definition
@@ -197,6 +197,13 @@ CMS_LANGUAGES = {
             'public': True,
             'hide_untranslated': False,
         },
+        {
+            'code': 'ru',
+            'name': gettext('ru'),
+            'redirect_on_fallback': True,
+            'public': True,
+            'hide_untranslated': False,
+        }
     ],
     'default': {
         'redirect_on_fallback': True,
@@ -216,15 +223,31 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
+# DATABASES = {
+#     'default': {
+#         'CONN_MAX_AGE': 0,
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'HOST': 'localhost',
+#         'NAME': 'project.db',
+#         'PASSWORD': '',
+#         'PORT': '',
+#         'USER': ''
+#     }
+# }
+
+DATABASE_HOST = 'check-in.vps-cheprasov.host4g.ru'
+DATABASE_PORT = '5432'
+DATABASE_USER = 'weekl'
+DATABASE_PASSWORD ='!QW@1qw2'
 DATABASES = {
     'default': {
-        'CONN_MAX_AGE': 0,
-        'ENGINE': 'django.db.backends.sqlite3',
-        'HOST': 'localhost',
-        'NAME': 'project.db',
-        'PASSWORD': '',
-        'PORT': '',
-        'USER': ''
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'weekl',
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': DATABASE_HOST,
+        # 'TIME_ZONE': 'UTC',
+        'PORT': DATABASE_PORT,
     }
 }
 
