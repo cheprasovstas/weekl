@@ -1,0 +1,110 @@
+// Options
+// 
+// Quickly modify global styling by enabling or disabling optional features.
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap');
+
+
+$enable-rounded:            true !default;
+$enable-shadows:            true;
+$enable-transitions:        true;
+$enable-hover-media-query:  false;
+$enable-grid-classes:       true;
+$enable-print-styles:       true;
+
+// Variables
+//
+// Colors
+
+$theme-colors: (
+  primary: white,
+  secondary: #0085E3,
+  light: black,
+  dark: #0085E3,
+  info: #ccc,
+  success: #28a745,
+  warning: #ffc107,
+  danger: #dc3545
+);
+
+$body-bg: white;
+$body-color: white;
+
+
+$body-color-inverse: invert($body-color) !default;
+$link-color: #12bbad;
+
+// Fonts
+$font-family-base: 'Montserrat', sans-serif;
+$headings-font-family: $font-family-base;
+$display-font-family: $font-family-base;
+$font-weight-normal: 400;
+$headings-font-weight: 900;
+$lead-font-size:   1.30rem;
+
+$spacer: 1.5rem;
+$border-radius: 32;
+
+
+
+@import 'bootstrap-4.3.1';
+
+.round-btn {
+  border-radius: 32px;
+}
+
+
+.as-btn {
+  outline: 0 !important;
+  border-radius: 32px;
+  width: 160px;
+  height: 56px;
+  background-image: url('img/img-download-appstore.svg');
+  background-repeat: no-repeat;
+  background-position: 18px 11px;
+  background-color: transparent;
+  transition-duration: 0.4s;
+}
+
+
+.as-btn:hover {
+  outline: 0 !important;
+  background-image: url('img/img-download-appstore.svg');
+  background-color: transparent;
+  opacity:0.8;
+}
+
+
+.close-btn {
+  opacity: 1;
+  outline: 0 !important;
+}
+
+
+.sbscr-modal .modal-content{
+	border: none;
+  /*box-shadow: 0 16px 32px 0 #016BB6;*/
+  box-shadow: none;
+  border-radius: 2rem;
+}
+
+
+.sbscr-modal-header {
+  border: none;
+}
+
+
+.sbscr-modal-body {
+  padding: 0 64px 0;
+}
+
+
+.sbscr-modal-footer {
+  padding-top: 0px;
+  padding-bottom: 48px;
+  border: none;
+}
+
+
+

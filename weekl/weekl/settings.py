@@ -78,7 +78,7 @@ TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
@@ -184,6 +184,7 @@ INSTALLED_APPS = [
 
 LANGUAGES = (
     ## Customize this
+    ('ru', gettext('ru')),
     ('en', gettext('en')),
 )
 
@@ -214,6 +215,7 @@ CMS_LANGUAGES = {
 
 CMS_TEMPLATES = (
     ## Customize this
+    ('promo_nails.html', 'Promo Nails'),
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')

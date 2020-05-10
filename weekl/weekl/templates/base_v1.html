@@ -1,0 +1,50 @@
+{% load cms_tags menu_tags sekizai_tags %}
+<!doctype html>
+<html>
+    <head>
+        {% load staticfiles %}
+        <title>{% block title %}{% page_attribute page_title %}{% endblock %}</title>
+        <meta charset="utf-8">
+        <meta name="description" content="{% page_attribute 'meta_description' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/theme.css' %}" />
+
+        {# jquery #}
+            <script src="{% static 'js/moment-with-locales.js' %}"></script>
+            <script src="{% static 'js/jquery-3.4.1.slim.min.js' %}"></script>
+            <script src="{% static 'js/jquery-ui-1.12.1/jquery-ui.js' %}"></script>
+
+        {# bootstrap #}
+            <!--link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}" crossorigin="anonymous"-->
+            <script src="{% static 'bootstrap/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
+
+        {# favicon #}
+        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
+
+        {% block head %}{% endblock %}
+
+        {% render_block "css" %}
+        <!-- Yandex.Metrika counter -->
+            <script type="text/javascript" >
+               (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+               m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+               (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+               ym(62706088, "init", {
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+               });
+            </script>
+            <noscript><div><img src="https://mc.yandex.ru/watch/62706088" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body class="bg-dark">
+        {% block content %}{% endblock content %}
+
+        {% render_block "js" %}
+    </body>
+</html>
