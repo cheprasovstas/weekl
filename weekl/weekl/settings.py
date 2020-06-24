@@ -216,6 +216,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('promo_nails.html', 'Promo Nails'),
+    ('promo_common.html', 'Promo Common'),
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right')
