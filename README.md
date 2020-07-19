@@ -15,7 +15,11 @@ GIT:
     cd /var/weekl
     git clone -b master https://cheprasovstas:NQR4Cw6JwrVcJuM@github.com/cheprasovstas/weekl.git
     
-    
+GIT:  pull
+    cd /var/weekl/weekl;
+    git fetch origin master;
+    git pull origin master;
+
 django commands start:
                 cd /var/weekl/weekl/weekl
                 source /root/djangoenv/bin/activate;
